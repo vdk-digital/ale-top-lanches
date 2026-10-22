@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ale Top Lanches</title>
+<meta name="description" content="Cardápio e pedidos da Ale Top Lanches Hamburgueria, em Carambeí-PR. Peça pelo WhatsApp.">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="id">
+      <img class="logo" src="logo.webp" alt="Logo da Ale Top Lanches Hamburgueria" width="92" height="92">
+      <div>
+        <p class="kick">Hamburgueria · Delivery</p>
+        <h1 id="storeName">Ale Top Lanches</h1>
+        <p class="tagline">Sabor que conquista desde 2020</p>
+      </div>
+    </div>
+    <ul class="info" id="info"></ul>
+  </div>
+  <p class="reel-h">Mais pedidos</p>
+  <div class="reel" id="reel" role="region" aria-label="Fotos do cardápio">
+    <button type="button" class="rbtn l" id="rPrev" aria-label="Fotos anteriores">‹</button>
+    <div class="strip" id="strip"></div>
+    <button type="button" class="rbtn r" id="rNext" aria-label="Próximas fotos">›</button>
+  </div>
+  <div class="tri" aria-hidden="true"></div>
+</header>
+
+<div class="promo" id="promo" hidden><div class="wrap"><b>Frete grátis</b><span id="promoTxt"></span></div></div>
+
+<div id="viewMenu">
+  <div class="wrap">
+    <div class="box-warn closedbar" id="closedBar" hidden></div>
+    <div class="box-warn" id="offBar" hidden>Sem internet. Seu pedido continua salvo aqui. Reconecte para finalizar.</div>
+    <div class="modebox">
+      <div class="seg" id="modeSeg" role="group" aria-label="Como você quer receber">
+        <button type="button" data-mode="entrega" aria-pressed="true">Entrega<small>frete por bairro</small></button>
+        <button type="button" data-mode="retirada" aria-pressed="false">Retirada<small>sem frete</small></button>
+      </div>
+    </div>
+    <div class="search"><label class="sr" for="q">Buscar no cardápio</label><svg class="mg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Buscar lanche, prensado, bebida" autocomplete="off"><button type="button" id="qClear" aria-label="Limpar busca" hidden>✕</button></div>
+    <div id="repeatBox"></div>
+    <div id="featBox"></div>
+  </div>
+  <nav class="cats" id="catsBand" aria-label="Categorias"><div class="wrap" id="cats"></div></nav>
+  <main class="wrap" id="menu"></main>
+  <footer class="foot"><div class="wrap"><b>Ale Top Lanches</b><span>Hamburgueria · Sabor que conquista desde 2020</span><span>Ter a sáb 16h–23h · Dom 18h–23h</span><span id="footWa"></span></div></footer>
+</div>
+
+
+<div class="bar" id="bar" hidden><button type="button" id="barBtn"><span><span class="cnt num" id="barCnt">0</span>Ver meu pedido</span><span class="num" id="barTot">R$ 0,00</span></button></div>
+<div id="layer"></div>
+<div id="toast" class="toast" hidden></div>
+
+
+<script src="dados-padrao.js"></script>
+<script src="app-cliente.js"></script>
+</body>
+</html>
